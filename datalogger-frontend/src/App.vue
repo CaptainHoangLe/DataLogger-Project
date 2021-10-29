@@ -34,7 +34,7 @@
     </v-navigation-drawer>
 
     <v-content>
-      <v-card style= "background-color: red;margin: 5px">
+      <v-card>
         <router-view :key="componentKey"></router-view>
       </v-card>
      
