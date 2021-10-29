@@ -15,17 +15,13 @@
           <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
         </v-list-item-avatar>
 
-        <v-list-item-title>John Leider</v-list-item-title>
-
-        <!-- <v-btn icon @click.stop="mini = !mini">
-          <v-icon>mdi-chevron-left</v-icon>
-        </v-btn> -->
+        <v-list-item-title>Lê Việt Hoàng</v-list-item-title>
       </v-list-item>
 
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item :to="item.url" v-for="item in items" :key="item.title" link>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -38,28 +34,25 @@
     </v-navigation-drawer>
 
     <v-content>
-      <!-- <HelloWorld/> -->
+     <router-view :key="componentKey"></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
-
 export default {
   name: "App",
 
   components: {
-    // HelloWorld,
   },
 
   data() {
     return {
       drawer: true,
       items: [
-        { title: "Tổng quan", icon: "mdi-home-city" },
-        { title: "Thiết bị", icon: "mdi-account" },
-        { title: "Users", icon: "mdi-account-group-outline" },
+        { title: "Tổng quan", icon: "mdi-home-city",url: "/" },
+        { title: "Thiết bị", icon: "mdi-account",url: "/about" },
+        // { title: "Users", icon: "mdi-account-group-outline" },
       ],
       mini: true,
     };
