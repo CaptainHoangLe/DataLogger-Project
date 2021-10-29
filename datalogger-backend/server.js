@@ -3,6 +3,8 @@ var fs = require("fs");
 var url = require("url");
 var http = require("http");
 var querystring = require("querystring");
+let mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:port/datalogger_db');
 var db = []; //database
 //---------------------------------------------------------------------------------------------
 // function gửi yêu cầu(response) từ phía server hoặc nhận yêu cầu (request) của client gửi lên

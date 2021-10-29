@@ -34,7 +34,10 @@
     </v-navigation-drawer>
 
     <v-content>
-     <router-view :key="componentKey"></router-view>
+      <v-card style= "background-color: red;margin: 5px">
+        <router-view :key="componentKey"></router-view>
+      </v-card>
+     
     </v-content>
   </v-app>
 </template>
@@ -51,8 +54,7 @@ export default {
       drawer: true,
       items: [
         { title: "Tổng quan", icon: "mdi-home-city",url: "/" },
-        { title: "Thiết bị", icon: "mdi-account",url: "/about" },
-        // { title: "Users", icon: "mdi-account-group-outline" },
+        { title: "Thiết bị", icon: "mdi-account",url: "/device" },
       ],
       mini: true,
     };
